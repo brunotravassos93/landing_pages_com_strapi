@@ -36,7 +36,7 @@
     "dotenv": "tune"
   },
   "typescript.updateImportsOnFileMove.enabled": "never",
-  "workbench.colorTheme": "Omni",
+  "workbench.colorTheme": "OM Theme (Default Dracula Italic)",
   "material-icon-theme.files.associations": {
     "tsconfig.json": "tune",
     "*.webpack.js": "webpack",
