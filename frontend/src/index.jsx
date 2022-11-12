@@ -1,17 +1,22 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import { ThemeProvider } from 'styled-components';
-import ReactDOM from 'react-dom/client';
 
 import { GlobalStyles } from './styles/global-styles';
-import Home from './templates/App';
 import { theme } from './styles/theme';
+import Home from './templates/Home';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
+ReactDOM.render(
   <React.StrictMode>
     <ThemeProvider theme={theme}>
+      <BrowserRouter>
+        <Switch>
+          <Route to="*" component={Home} />
+        </Switch>
+      </BrowserRouter>
       <GlobalStyles />
-      <Home />
     </ThemeProvider>
   </React.StrictMode>,
+  document.getElementById('root'),
 );
